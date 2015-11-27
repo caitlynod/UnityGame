@@ -2,26 +2,17 @@
 
 import System.Collections.Generic;
 
-public var page:int = 0;
-
 var inventory = new Dictionary.<String,int>();
 inventory["page"] = 1;
 
-function Start() {
-}
 
 function Update() {
+	
 }
 
-function OnTriggerEnter(other:Collider) {
-	if(other.tag =="page") {
-	page++;
-	Destroy(other.gameObject);
-	
-	}
-}
+public var page : int = 0;
 
 function OnMouseUpAsButton() {
 	page++;
-	Destroy(gameObject);
+	Debug.Log(page);
 }

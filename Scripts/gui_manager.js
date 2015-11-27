@@ -4,12 +4,13 @@ var pagesCount:UI.Text;
 
 function Update() {
 	var player = GameObject.FindGameObjectWithTag("Main").GetComponent(inventoryScript);
+	//Debug.Log("Hey Im " + page.page);
 	
-	var pagesValue:int = player.page;
+	var pagesInv:int = player.page;
 	
-	if (pagesValue < 2 && pagesValue > 0) {
-		pagesCount.text = pagesValue + " " + "Page Found";
+	if (pagesInv < 2 && pagesInv > 0) {
+		pagesCount.text = pagesInv + " " + "Page Found";
 	} else {
-		pagesCount.text = pagesValue + " " + "Pages Found";
+		pagesCount.text = pagesInv + " " + "Pages Found";
 	}
 }
