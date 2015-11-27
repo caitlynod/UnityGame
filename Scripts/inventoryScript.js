@@ -12,7 +12,7 @@ function Update() {
 
 public var page : int = 0;
 
-function OnMouseUpAsButton() {
+function incrementPage() {
 	page++;
-	Debug.Log(page);
+	//Debug.Log("wldishjkzcx");
 }
