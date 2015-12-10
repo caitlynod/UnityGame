@@ -4,7 +4,7 @@ private var open : boolean;
 private var enter : boolean;
 private var defaultRot : Vector3;
 private var openRot : Vector3;
-
+var keys : float;
 
 
 function Start(){
@@ -47,11 +47,13 @@ function OnTriggerEnter (other : Collider){
 var key = GameObject.FindGameObjectWithTag("Player").GetComponent(characterScript);
 var numkey: int = key.key;
 
- 	Debug.Log (numkey);
+ 	//Debug.Log (numkey);
 
-if (other.gameObject.tag == "Player" && numkey >= 1) {
+if (other.gameObject.tag == "Player" && numkey == keys) {
+
 enter = true;
 }
+
 if(enter == false){
 	GUI.Label(new Rect(Screen.width/2 - 75, Screen.height - 100, 150, 30), "You need a key for this door!");
 
