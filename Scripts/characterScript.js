@@ -12,6 +12,9 @@ function Start () {
 }
 
 function Update () {
+if (health <= 0) {
+	Application.LoadLevel("Gameover");
+}
 
 }
 
@@ -35,6 +38,7 @@ public var page : int = 0;
 function incrementPage() {
 	page++;
 	inventory["Page"] += 1;
-
+	if(inventory["Page"] == 6){
+	Application.LoadLevel ("victoryscreen");
+	}
 }
-
